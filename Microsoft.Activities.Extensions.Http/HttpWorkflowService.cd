@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Microsoft.Activities.Http.Activation.HttpWorkflowServiceHost">
+    <Position X="2.5" Y="2.25" Width="3" />
+    <Members>
+      <Field Name="builder" Hidden="true" />
+      <Field Name="Configuration" Hidden="true" />
+      <Field Name="DefaultTimeout" Hidden="true" />
+      <Field Name="UriTemplateTables" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AASAADAAAAAAAQAAQQFAAAgABCCIggKAgAAAAEASQAA=</HashCode>
+      <FileName>Activation\HttpWorkflowServiceHost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Activities.Http.Activation.HttpWorkflowResource">
+    <Position X="10.75" Y="3" Width="2" />
+    <Members>
+      <Field Name="idle" Hidden="true" />
+      <Field Name="pendingBookmark" Hidden="true" />
+      <Field Name="protocolEvent" Hidden="true" />
+      <Field Name="response" Hidden="true" />
+      <Field Name="responseEvent" Hidden="true" />
+      <Field Name="serviceHost" Hidden="true" />
+      <Field Name="testInfo" Hidden="true" />
+      <Field Name="testName" Hidden="true" />
+      <Field Name="unloadTimer" Hidden="true" />
+      <Field Name="workflowApplication" Hidden="true" />
+      <Field Name="WorkflowApplicationCache" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Microsoft.Activities.Http.Activation.HttpWorkflowResource.InstanceTracker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Activation\HttpWorkflowResource.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QgQEAEBAAIBAQAAkAgAABABgBAICgQCAwoBAAAAAAAA=</HashCode>
+      <FileName>Activation\HttpWorkflowResource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Activities.Http.Activities.HttpReceive">
+    <Position X="7.75" Y="1.5" Width="2.5" />
+    <Members>
+      <Field Name="hostContext" Hidden="true" />
+      <Field Name="JsonMediaType" Hidden="true" />
+      <Field Name="noPersistHandle" Hidden="true" />
+      <Field Name="persist" Hidden="true" />
+      <Field Name="receiveContext" Hidden="true" />
+      <Field Name="TextJsonMediaType" Hidden="true" />
+      <Field Name="TextXmlMediaType" Hidden="true" />
+      <Field Name="XmlMediaType" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAgQAAACAAAAAAQABAClAgAAEFACAAAAAAAAAACgIAA=</HashCode>
+      <FileName>Activities\HttpReceive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.ApplicationServer.Http.HttpServiceHost" Collapsed="true">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="Microsoft.Activities.Http.Activation.IHttpWorkflowHostContext">
+    <Position X="10.25" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Activation\IHttpWorkflowHostContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Activities.Http.Activation.IHttpWorkflowReceiveContext">
+    <Position X="6.75" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Activation\IHttpWorkflowReceiveContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

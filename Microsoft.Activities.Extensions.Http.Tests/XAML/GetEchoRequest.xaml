@@ -1,0 +1,46 @@
+<HttpWorkflowService mc:Ignorable="sap sads" sap:VirtualizedContainerService.HintSize="524,431" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces"
+ xmlns="clr-namespace:Microsoft.Activities.Http.Activities;assembly=Microsoft.Activities.Extensions.Http"
+ xmlns:mah="clr-namespace:Microsoft.Activities.Http.Activities;assembly=Microsoft.Activities.Extensions.Http"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:s1="clr-namespace:System;assembly=System"
+ xmlns:s2="clr-namespace:System;assembly=System.Core"
+ xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:snh="clr-namespace:System.Net.Http;assembly=Microsoft.Net.Http"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p:Sequence sap:VirtualizedContainerService.HintSize="504,389">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <HttpReceive CanCreateInstance="True" sap:VirtualizedContainerService.HintSize="482,265" Method="GET" PersistBeforeSend="False" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" UriTemplate="/{ID}">
+      <HttpReceive.Body>
+        <p:ActivityFunc x:TypeArguments="snh:HttpRequestMessage, scg:IDictionary(x:String, x:Object), x:Object">
+          <p:ActivityFunc.Argument1>
+            <p:DelegateInArgument x:TypeArguments="snh:HttpRequestMessage" Name="request" />
+          </p:ActivityFunc.Argument1>
+          <p:ActivityFunc.Argument2>
+            <p:DelegateInArgument x:TypeArguments="scg:IDictionary(x:String, x:Object)" Name="args" />
+          </p:ActivityFunc.Argument2>
+          <p:ActivityFunc.Result>
+            <p:DelegateOutArgument x:TypeArguments="x:Object" Name="response" />
+          </p:ActivityFunc.Result>
+          <p:Assign sap:VirtualizedContainerService.HintSize="242,60">
+            <p:Assign.To>
+              <p:OutArgument x:TypeArguments="x:Object">[response]</p:OutArgument>
+            </p:Assign.To>
+            <p:Assign.Value>
+              <p:InArgument x:TypeArguments="x:Object">[request.Method.ToString()]</p:InArgument>
+            </p:Assign.Value>
+          </p:Assign>
+        </p:ActivityFunc>
+      </HttpReceive.Body>
+    </HttpReceive>
+  </p:Sequence>
+</HttpWorkflowService>

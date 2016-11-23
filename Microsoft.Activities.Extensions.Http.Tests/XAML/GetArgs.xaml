@@ -1,0 +1,104 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Activity1" mva:VisualBasic.Settings="{x:Null}"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:maha="clr-namespace:Microsoft.Activities.Http.Activities;assembly=Microsoft.Activities.Extensions.Http"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:snh="clr-namespace:System.Net.Http;assembly=Microsoft.Net.Http"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.ApplicationServer.Http</x:String>
+      <x:String>Microsoft.Activities.Http.Activities</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities.Debugger</x:String>
+      <x:String>System.Activities.Debugger.Symbol</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Http</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.ApplicationServer.Http</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities.Extensions.Http</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>Microsoft.Net.Http</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence>
+    <maha:HttpWorkflowService>
+      <maha:HttpWorkflowService.Receives>
+        <maha:HttpReceive CanCreateInstance="True" Method="GET" PersistBeforeSend="False" UriTemplate="/{arg1}/{arg2}?q1={q1}&amp;q2={q2}">
+          <maha:HttpReceive.Body>
+            <ActivityFunc x:TypeArguments="snh:HttpRequestMessage, scg:IDictionary(x:String, x:String), x:Object">
+              <ActivityFunc.Argument1>
+                <DelegateInArgument x:TypeArguments="snh:HttpRequestMessage" Name="request" />
+              </ActivityFunc.Argument1>
+              <ActivityFunc.Argument2>
+                <DelegateInArgument x:TypeArguments="scg:IDictionary(x:String, x:String)" Name="args" />
+              </ActivityFunc.Argument2>
+              <ActivityFunc.Result>
+                <DelegateOutArgument x:TypeArguments="x:Object" Name="response" />
+              </ActivityFunc.Result>
+              <Assign>
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[response]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Object">[String.Format("Arg1 = {0}, Arg2 = {1}, Q1 = {2}, Q2 = {3}", args("ARG1"), args("ARG2"), args("Q1"), args("Q2"))]</InArgument>
+                </Assign.Value>
+                <sap2010:WorkflowViewState.IdRef>Assign_1</sap2010:WorkflowViewState.IdRef>
+              </Assign>
+            </ActivityFunc>
+          </maha:HttpReceive.Body>
+          <sap2010:WorkflowViewState.IdRef>HttpReceive_1</sap2010:WorkflowViewState.IdRef>
+        </maha:HttpReceive>
+      </maha:HttpWorkflowService.Receives>
+      <sap2010:WorkflowViewState.IdRef>HttpWorkflowService_1</sap2010:WorkflowViewState.IdRef>
+    </maha:HttpWorkflowService>
+    <sap2010:WorkflowViewState.IdRef>Sequence_1</sap2010:WorkflowViewState.IdRef>
+    <sads:DebugSymbol.Symbol>d1hDOlxEZXZcTWljcm9zb2Z0LkFjdGl2aXRpZXNcTWljcm9zb2Z0LkFjdGl2aXRpZXMuRXh0ZW5zaW9ucy5IdHRwLlRlc3RzXFhBTUxcR2V0QXJncy54YW1sBjYDVw4CAQE3BVQgAgECOQlRHAIBA0UPTRgCAQRKOkqrAQIBB0c7R0UCAQU=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.IdRef>Activity1_1</sap2010:WorkflowViewState.IdRef>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="HttpReceive_1" sap:VirtualizedContainerService.HintSize="482,233" />
+      <sap2010:ViewStateData Id="HttpWorkflowService_1" sap:VirtualizedContainerService.HintSize="596,279" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="618,403">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Activity1_1" sap:VirtualizedContainerService.HintSize="658,483" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

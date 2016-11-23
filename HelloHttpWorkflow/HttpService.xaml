@@ -1,0 +1,28 @@
+﻿<Sequence xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:maha="clr-namespace:Microsoft.Activities.Http.Activities;assembly=Microsoft.Activities.Extensions.Http" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:snh="clr-namespace:System.Net.Http;assembly=Microsoft.Net.Http" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <maha:HttpReceive CanCreateInstance="True" Method="GET" PersistBeforeSend="False" UriTemplate="/{arg1}/{arg2}?q1={q1}&amp;q2={q2}">
+    <maha:HttpReceive.Body>
+      <ActivityFunc x:TypeArguments="snh:HttpRequestMessage, scg:IDictionary(x:String, x:String), x:Object" Result="{x:Reference __ReferenceID0}">
+        <ActivityFunc.Argument1>
+          <DelegateInArgument x:TypeArguments="snh:HttpRequestMessage" />
+        </ActivityFunc.Argument1>
+        <ActivityFunc.Argument2>
+          <DelegateInArgument x:TypeArguments="scg:IDictionary(x:String, x:String)" Name="parameters" />
+        </ActivityFunc.Argument2>
+        <Sequence>
+          <Assign DisplayName="Assign response content">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Object">
+                <DelegateArgumentReference x:TypeArguments="x:Object">
+                  <DelegateOutArgument x:TypeArguments="x:Object" x:Name="__ReferenceID0" />
+                </DelegateArgumentReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[string.Format("Arg1 = {0}, Arg2 = {1}, Q1 = {2}, Q2 = {3}", parameters("ARG1"), parameters("ARG2"), parameters("Q1"), parameters("Q2"))]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ActivityFunc>
+    </maha:HttpReceive.Body>
+  </maha:HttpReceive>
+</Sequence>

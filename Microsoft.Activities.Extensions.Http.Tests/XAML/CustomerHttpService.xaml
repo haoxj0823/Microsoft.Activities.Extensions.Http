@@ -1,0 +1,173 @@
+﻿<Activity mc:Ignorable="sads sap sap2010" x:Class="Microsoft.Activities.Http.Tests.XAML.CustomerHttpService" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Microsoft.Activities.Http.Tests.XAML.CustomerHttpService_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:local="clr-namespace:Microsoft.Activities.Http.Tests"
+ xmlns:maha="clr-namespace:Microsoft.Activities.Http.Activities;assembly=Microsoft.Activities.Extensions.Http"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:s1="clr-namespace:System;assembly=System"
+ xmlns:s2="clr-namespace:System;assembly=System.Xml"
+ xmlns:s3="clr-namespace:System;assembly=System.Core"
+ xmlns:s4="clr-namespace:System;assembly=System.ServiceModel"
+ xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities"
+ xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System"
+ xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel"
+ xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core"
+ xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:sd="clr-namespace:System.Data;assembly=System.Data"
+ xmlns:sl="clr-namespace:System.Linq;assembly=System.Core"
+ xmlns:sn="clr-namespace:System.Net;assembly=System.Net"
+ xmlns:sn1="clr-namespace:System.Net;assembly=System"
+ xmlns:snh="clr-namespace:System.Net.Http;assembly=Microsoft.Net.Http"
+ xmlns:st="clr-namespace:System.Text;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.Activities.Http.Activities</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities.Debugger</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Net.Http</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Microsoft.Activities.Http.Tests</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities.Extensions.Http</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Net</AssemblyReference>
+      <AssemblyReference>Microsoft.Net.Http</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities.Extensions.Http.Tests</AssemblyReference>
+      <AssemblyReference>Microsoft.Net.Http.Formatting</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <maha:HttpWorkflowService sap2010:WorkflowViewState.IdRef="HttpWorkflowService_1">
+    <maha:HttpWorkflowService.Receives>
+      <maha:HttpReceive CanCreateInstance="True" sap2010:WorkflowViewState.IdRef="HttpReceive_1" Method="GET" PersistBeforeSend="False" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" UriTemplate="/{ID}">
+        <maha:HttpReceive.Body>
+          <ActivityFunc x:TypeArguments="snh:HttpRequestMessage, scg3:IDictionary(x:String, x:String), x:Object">
+            <ActivityFunc.Argument1>
+              <DelegateInArgument x:TypeArguments="snh:HttpRequestMessage" Name="request" />
+            </ActivityFunc.Argument1>
+            <ActivityFunc.Argument2>
+              <DelegateInArgument x:TypeArguments="scg3:IDictionary(x:String, x:String)" Name="args" />
+            </ActivityFunc.Argument2>
+            <ActivityFunc.Result>
+              <DelegateOutArgument x:TypeArguments="x:Object" Name="response" />
+            </ActivityFunc.Result>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Int32" Name="id" />
+              </Sequence.Variables>
+              <TryCatch sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                <TryCatch.Try>
+                  <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[id]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(args("ID"))]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:FormatException" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                    <ActivityAction x:TypeArguments="s:FormatException">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:FormatException" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Throw DisplayName="Throw BadRequest" Exception="[New Http.HttpRequestException(HttpStatusCode.BadRequest.ToString())]" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                    </ActivityAction>
+                  </Catch>
+                  <Catch x:TypeArguments="s:OverflowException" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                    <ActivityAction x:TypeArguments="s:OverflowException">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:OverflowException" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Throw DisplayName="Throw BadRequest" Exception="[New Http.HttpRequestException(HttpStatusCode.BadRequest.ToString())]" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+              </TryCatch>
+              <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[response]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="local:Customer">[CustomerList(id)]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </ActivityFunc>
+        </maha:HttpReceive.Body>
+      </maha:HttpReceive>
+    </maha:HttpWorkflowService.Receives>
+    <maha:HttpWorkflowService.Variables>
+      <Variable x:TypeArguments="scg3:List(local:Customer)" Default="[Customer.GetDefaultCustomerList()]" Name="CustomerList" />
+    </maha:HttpWorkflowService.Variables>
+    <sads:DebugSymbol.Symbol>d2RDOlxEZXZcTWljcm9zb2Z0LkFjdGl2aXRpZXNcTWljcm9zb2Z0LkFjdGl2aXRpZXMuRXh0ZW5zaW9ucy5IdHRwLlRlc3RzXFhBTUxcQ3VzdG9tZXJIdHRwU2VydmljZS54YW1sD0gDiQEeAgEBhgFFhgFqAgECSgeDARoCAQNWDYABGAIBBFoPdxoCAQt4D38YAgEFXBNjHAIBEGsXa7sBAgEOcxdzuwECAQx9QH1SAgEIejt6RQIBBmE9YVoCARNePl5CAgERa0drjgECAQ9zR3OOAQIBDQ==</sads:DebugSymbol.Symbol>
+  </maha:HttpWorkflowService>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="Throw_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Catch`1_1" sap:VirtualizedContainerService.HintSize="400,21">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg3:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Throw_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Catch`1_2" sap:VirtualizedContainerService.HintSize="400,104">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg3:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="TryCatch_1" sap:VirtualizedContainerService.HintSize="414,288" />
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="414,60" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="436,512">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg3:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="HttpReceive_1" sap:VirtualizedContainerService.HintSize="482,685" />
+      <sap2010:ViewStateData Id="HttpWorkflowService_1" sap:VirtualizedContainerService.HintSize="596,731" />
+      <sap2010:ViewStateData Id="Microsoft.Activities.Http.Tests.XAML.CustomerHttpService_1" sap:VirtualizedContainerService.HintSize="636,811" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
