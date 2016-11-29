@@ -12,10 +12,12 @@ namespace Microsoft.Activities.Http.Activities
     using System.Net.Http;
 
     using Microsoft.ApplicationServer.Http.Dispatcher;
+    using System.Drawing;
 
     /// <summary>
     /// The CheckIfNoneMatch activity looks at the request message for an IfNoneMatch header and checks against the supplied ETag value
     /// </summary>
+    [ToolboxBitmap(typeof(CheckIfNoneMatch), "HttpReceive16.png")]
     public sealed class CheckIfNoneMatch : CodeActivity
     {
         // Define an activity input argument of type string

@@ -12,10 +12,12 @@ namespace Microsoft.Activities.Http.Activities
     using System.Net.Http;
 
     using Microsoft.ApplicationServer.Http.Dispatcher;
+    using System.Drawing;
 
     /// <summary>
     /// The check if match.
     /// </summary>
+    [ToolboxBitmap(typeof(CheckIfMatch), "HttpReceive16.png")]
     public sealed class CheckIfMatch : CodeActivity
     {
         #region Public Properties

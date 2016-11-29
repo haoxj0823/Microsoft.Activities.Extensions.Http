@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Microsoft.Activities.Extensions.Http</id>
+        <version>1.0.0</version>
+        <authors>Microsoft</authors>
+        <owners>Microsoft</owners>
+        <licenseUrl>http://wf.codeplex.com/license</licenseUrl>
+        <projectUrl>http://wf.codeplex.com/</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Provides useful extension methods, alternate Task based API and activities.</description>
+        <releaseNotes>Windows Workflow Foundation extensions and activities</releaseNotes>
+        <copyright>Copyright 2016 Microsoft</copyright>
+        <language />
+        <tags>WF WF4 Workflow Http</tags>
+        <dependencies>
+            <dependency id="Microsoft.Activities.Extensions" version="2.0.6.9" />
+            <dependency id="Microsoft.Activities.UnitTesting" version="2.0.6.9" />
+
+          <dependency id="HttpClient" version="0.5.0" />
+          <dependency id="JsonValue" version="0.5.0" />
+          <dependency id="WebApi" version="0.5.0" />
+          <dependency id="WebApi.All" version="0.5.0" />
+          <dependency id="WebApi.Enhancements" version="0.5.0"  />
+          <dependency id="WebApi.OData" version="0.5.0" />
+          <dependency id="WebApi.Core" version="0.5.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="lib\net45\Microsoft.Activities.Extensions.Http.Design.dll" target="lib\net45\Microsoft.Activities.Extensions.Http.Design.dll" />
+        <file src="lib\net45\Microsoft.Activities.Extensions.Http.dll" target="lib\net45\Microsoft.Activities.Extensions.Http.dll" />
+        <file src="lib\net45\Microsoft.Activities.Extensions.Http.UnitTesting.dll" target="lib\net45\Microsoft.Activities.Extensions.Http.UnitTesting.dll" />
+        <file src="tools\install.ps1" target="tools\install.ps1" />
+        <file src="tools\Microsoft.Activities.Extensions.Http.NuGet.dll" target="tools\Microsoft.Activities.Extensions.Http.NuGet.dll" />
+        <file src="tools\uninstall.ps1" target="tools\uninstall.ps1" />
+    </files>
+</package>
