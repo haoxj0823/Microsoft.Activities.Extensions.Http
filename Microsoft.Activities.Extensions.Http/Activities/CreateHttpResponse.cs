@@ -18,7 +18,7 @@ namespace Microsoft.Activities.Http.Activities
     /// <typeparam name="T">
     /// The type of content you want to return
     /// </typeparam>
-    [ToolboxBitmap(typeof(CreateHttpResponse<T>), "HttpReceive16.png")]
+    //[ToolboxBitmap(typeof(CreateHttpResponse<T>), "HttpReceive16.png")]
     public sealed class CreateHttpResponse<T> : CodeActivity<object>
     {
         public CreateHttpResponse()

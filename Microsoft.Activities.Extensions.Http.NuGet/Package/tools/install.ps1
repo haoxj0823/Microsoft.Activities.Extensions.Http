@@ -15,10 +15,10 @@ Add-ActivityToolbox -Project $project.Object -Activity "Microsoft.Activities.Htt
 Add-ActivityToolbox -Project $project.Object -Activity "Microsoft.Activities.Http.Activities.CheckIfNoneMatch" -Category "Microsoft.Activities.Http.Activities" -ActivityAssembly "Microsoft.Activities.Extensions.Http" -BitmapID "HttpReceive"
 Add-ActivityToolbox -Project $project.Object -Activity "Microsoft.Activities.Http.Activities.CreateHttpResponse" -Category "Microsoft.Activities.Http.Activities" -ActivityAssembly "Microsoft.Activities.Extensions.Http" -BitmapID "HttpReceive"
 
-start http://wf.codeplex.com/wikipage?title=Microsoft.Activities%20Overview
+#start http://wf.codeplex.com/wikipage?title=Microsoft.Activities%20Overview
 
 # Update this URI to match the release page on CodePlex
-start http://wf.codeplex.com/releases/view/90150
+#start http://wf.codeplex.com/releases/view/90150
 
 # # Future function to install with PowerShell and not the cmdlet
 # function AddActivity (

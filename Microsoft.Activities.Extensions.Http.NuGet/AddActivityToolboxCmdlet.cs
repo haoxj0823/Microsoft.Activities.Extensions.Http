@@ -201,8 +201,8 @@ namespace Microsoft.Activities.Extensions.Http.NuGet
             var worker =
                 (AssemblyLoadWorker)
                 domain.CreateInstanceAndUnwrap(
-                    Assembly.GetExecutingAssembly().GetName().FullName, 
-                    "Microsoft.Activities.Extensions.NuGet.AssemblyLoadWorker");
+                    Assembly.GetExecutingAssembly().GetName().FullName,
+                    "Microsoft.Activities.Extensions.Http.NuGet.AssemblyLoadWorker");
 
             var assemblyQualifiedName = worker.GetFullName(assemblyPath, activityName);
 

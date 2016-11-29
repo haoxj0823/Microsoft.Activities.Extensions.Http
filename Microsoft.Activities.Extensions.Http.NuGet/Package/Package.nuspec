@@ -2,9 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Microsoft.Activities.Extensions.Http</id>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
         <authors>Microsoft</authors>
         <owners>Microsoft</owners>
+        <title>Microsoft.Activities.Extensions.Http</title>
         <licenseUrl>http://wf.codeplex.com/license</licenseUrl>
         <projectUrl>http://wf.codeplex.com/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -14,9 +15,8 @@
         <language />
         <tags>WF WF4 Workflow Http</tags>
         <dependencies>
-            <dependency id="Microsoft.Activities.Extensions" version="2.0.6.9" />
-            <dependency id="Microsoft.Activities.UnitTesting" version="2.0.6.9" />
-
+          <dependency id="Microsoft.Activities.Extensions" version="2.0.6.9" />
+          <dependency id="Microsoft.Activities.UnitTesting" version="2.0.6.9" />
           <dependency id="HttpClient" version="0.5.0" />
           <dependency id="JsonValue" version="0.5.0" />
           <dependency id="WebApi" version="0.5.0" />
